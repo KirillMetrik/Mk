@@ -30,10 +30,9 @@ function createPlayer(playerClass, playerName, life) {
         <img src="http://reactmarathon-api.herokuapp.com/assets/scorpion.gif" />
     </div>
     `;
-
-    const arenas = document.querySelector('div.arenas');
-    arenas.appendChild(el);
+    return el;
 }
 
-createPlayer('player1', 'SCORPION', 50);
-createPlayer('player2', 'SUB-ZERO', 80);
+const arenas = document.querySelector('div.arenas');
+arenas.appendChild(createPlayer('player1', 'SCORPION', 50));
+arenas.appendChild(createPlayer('player2', 'SUB-ZERO', 80));
